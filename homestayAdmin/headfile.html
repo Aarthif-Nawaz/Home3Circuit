@@ -1,0 +1,39 @@
+<!--HTML document to define the layout of the header and the navigation bar-->
+<div id="container">
+	<div id="header">
+		<img src="Images/logo.png" height="200px" width="400px">
+		<br><h2>We combine helping people find their perfect Homestay</h2>
+		<h3 id="h3"><i><blockquote>“Three Rules of Work: Out of clutter find simplicity; <br>From discord find harmony;<br> In the middle of difficulty lies opportunity”<br><br>-Andrew Carnegie</blockquote></i></h3>
+		<h3><?php echo "Sri-Lanka, ".date('d F Y H:i:s');?> </h3>
+	</div>
+	<div id="navigation">
+		<ul>
+			<?php
+			if(isset($_SESSION['userId'])){
+				if($_SESSION['userType'] != "Customer"){
+					echo "<li><a href='myHome.php'>My Homestay's</a></li>";
+					echo "<li><a href='addHome.php'>Add HomeStay</a></li>";
+					echo "<li><a href='viewbookings.php'>View Bookings</a></li>";
+					echo "<li><a href='financial.php'>My Financial Forecast</a></li>";
+					echo "<li style='float: right'><a href='report.php'>My Weather Forecast</a></li>";
+					echo "<li style='float: right'><a href='money.php'>Money Fluctuations</a></li>";
+					echo "<li style='float: right'><a href='predicted_occupany.php'>Predicted Occupancy</a></li>";
+					echo "<li style='float: right'><a href='seasonal.php'>Seasonal adoptions and recommendations</a></li>";
+				}
+				else if($_SESSION['userType'] == "Super Admin"){
+					echo "<li><a href='logout.php'>Logout</a></li>";
+				}
+				else{
+					echo "<li><a href='index.php'>Login</a></li>";
+					echo "<li><a href='signup.php'>Signup</a></li>";	
+				}
+				
+			}
+			else{
+				echo "<li><a href='index.php'>Login</a><li>";
+				echo "<li><a href='signup.php'>Signup</a></li>";
+			}
+			?>
+		</ul>
+	</div>
+<div id="content">

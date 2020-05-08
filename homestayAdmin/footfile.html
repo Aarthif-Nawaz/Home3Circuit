@@ -1,0 +1,17 @@
+<!--HTML document to define the layout of the foot-->
+<div>
+	<div id="footer">
+		<div id="navigation">
+			<ul>
+				<?php
+					if(isset($_SESSION['userId'])){
+						echo "<li style='float: right'><a href='logout.php'>Logout</a></li>";
+					}
+				?>
+			</ul>
+		</div>
+		&copy homestay, 2020 - 123/3 Anderson Road, Colombo, Sri-Lanka, 10350, SL
+		<br>Tel: +94-077 375 3001
+		<br> Email : homestay807@gmail.com
+	</div>
+</div>
