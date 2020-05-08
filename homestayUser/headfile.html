@@ -1,0 +1,37 @@
+<!--HTML document to define the layout of the header and the navigation bar-->
+<div id="container">
+	<div id="header">
+		<img src="Images/logo.png" height="200px" width="400px">
+		<br><h2>We combine helping people find their perfect HomeStay</h2>
+		<h3 id="h3"><i><blockquote>“Never let your memories be greater than your dreams.”<br>- Fathima Ramzi</blockquote></i></h3>
+		<h3><?php echo "Sri-Lanka, ".date('d F Y H:i:s');?> </h3>
+	</div>
+	<div id="navigation">
+		<ul>
+			<?php
+			if(isset($_SESSION['userId'])){
+				if($_SESSION['userType']=="Customer"){
+					echo "<li><a href='index.php'>View Homestay's</a></li>";
+					echo "<li><a href='aboutus.php'>About US</a></li>";
+					echo "<li><a href='Mybookings.php'>View My Bookings</a></li>";
+					echo "<li style='float: right'><a href='logout.php'>Logout</a></li>";
+				}
+				else{
+					echo "<li><a href='index.php'>View Homestay's</a></li>";
+					echo "<li><a href='aboutus.php'>About US</a></li>";
+					echo "<li style='float: right'><a href='login.php'>Login</a></li>";
+					echo "<li style='float: right'><a href='signup.php'>Sign Up</a></li>";
+				}
+			}
+			else{
+				
+				echo "<li><a href='index.php'>View Homestay's</a></li>";
+				echo "<li><a href='aboutus.php'>About US</a></li>";
+				echo "<li style='float: right'><a href='login.php'>Login</a></li>";
+				echo "<li style='float: right'><a href='signup.php'>Sign Up</a></li>";
+				
+			}
+			?>
+		</ul>
+	</div>
+<div id="content">
