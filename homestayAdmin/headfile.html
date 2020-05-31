@@ -12,13 +12,13 @@
 			if(isset($_SESSION['userId'])){
 				if($_SESSION['userType'] != "Customer"){
 					echo "<li><a href='myHome.php'>My Homestay's</a></li>";
-					echo "<li><a href='addHome.php'>Add HomeStay</a></li>";
+					echo "<li><a href='addHome.php'>Add Homestay</a></li>";
 					echo "<li><a href='viewbookings.php'>View Bookings</a></li>";
 					echo "<li><a href='financial.php'>My Financial Forecast</a></li>";
 					echo "<li style='float: right'><a href='report.php'>My Weather Forecast</a></li>";
-					echo "<li style='float: right'><a href='money.php'>Money Fluctuations</a></li>";
+					echo "<li style='float: right'><a href='money.php'>Price Fluctuations</a></li>";
 					echo "<li style='float: right'><a href='predicted_occupany.php'>Predicted Occupancy</a></li>";
-					echo "<li style='float: right'><a href='seasonal.php'>Seasonal adoptions and recommendations</a></li>";
+					echo "<li style='float: right'><a href='seasonal.php'>Seasonal adoptations and recommendations</a></li>";
 				}
 				else if($_SESSION['userType'] == "Super Admin"){
 					echo "<li><a href='logout.php'>Logout</a></li>";
