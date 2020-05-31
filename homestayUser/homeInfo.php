@@ -32,7 +32,7 @@ echo "<p><h5> No of Rooms Available - ".$thearrayprod['homestayRooms']."</h5>";
 echo "<form action=Mybookings.php method=post>";
 echo "<p>Rooms To Book  ";
 echo "<select name='quantity' style='margin-left:30px;width:50px;height:30px;color:white;background-color:black;font-size:18px';>";
-
+// this part is to fill the details on how many people are coming to the homestay
 for ( $i = 1; $i <= $thearrayprod['homestayRooms']; $i++ ){
  echo "<option value=".$i.">".$i."</option>";
 }
