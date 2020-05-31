@@ -18,6 +18,7 @@ margin-top: 8px;
 margin-right: 16px;
 font-size: 17px;'>";
 echo "<p style='margin-top:10px'>Sort By : ";
+// This part is to filter by a search option and get the hometstays according to that
 echo "<select name='factor' style='margin-left:10px;margin-top:10px;width:150px;height:30px;color:black;background-color:#4CAF50;font-size:18px';>";
 echo "<option></option>";
 echo "<option>Price</option>";
@@ -41,7 +42,7 @@ echo "<br>";
 echo "<br>";
 echo "<br>";
 echo "<br>";
-
+// Check if the any of the factors were selected in order for the data to be filtered.. and if it is filtered it will provide the relevent results
 if(!empty($_POST['factor'])){
     $factor = $_POST['factor'];
     if($factor != 'Select Option'){
